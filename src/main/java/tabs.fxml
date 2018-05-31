@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<GridPane alignment="TOP_CENTER" minHeight="480.0" minWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.UserTableController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="331.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="80.0" minHeight="80.0" prefHeight="80.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <TableView id="usersTable" fx:id="usersTable">
+        <columns>
+            <TableColumn id="usersTableId" fx:id="usersTableId" prefWidth="117.0" text="id" />
+          <TableColumn id="usersTableUsername" fx:id="usersTableUsername" prefWidth="117.0" text="username" />
+            <TableColumn id="usersTablePassword" fx:id="usersTablePassword" prefWidth="115.0" text="password" />
+            <TableColumn id="usersTableEmail" fx:id="usersTableEmail" minWidth="0.0" prefWidth="211.0" text="email" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="BOTTOM_RIGHT" spacing="25.0" GridPane.rowIndex="1">
+         <children>
+            <TextField fx:id="usernameField" alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="200.0" />
+            <TextField fx:id="passwordField" alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="200.0" />
+            <TextField fx:id="emailField" alignment="BOTTOM_LEFT" prefHeight="31.0" prefWidth="200.0" />
+            <Button fx:id="addUserButton" alignment="CENTER" mnemonicParsing="false" onAction="#addUser" prefHeight="31.0" prefWidth="68.0" text="Add" />
+         </children>
+         <padding>
+            <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+         </padding>
+      </HBox>
+   </children>
+</GridPane>
